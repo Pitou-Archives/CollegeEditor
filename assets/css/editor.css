@@ -1,0 +1,137 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	margin-left: -250px;
+	height: 100%; 
+	font-family: helvetica, verdana;
+	overflow: hidden;
+	transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-ms-transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+nav {
+	float: left;
+	background-color: #444;
+	position: fixed;
+	width: 250px;
+	height: 100%;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+nav li {
+	list-style: none;
+	color: white;
+	font-weight: bold;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+	border-bottom: 1px solid #222;
+	cursor: pointer;
+	transition-duration: 0.3s;
+	-ms-transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+}
+
+nav .active {
+	background-color: #0291ff;
+	padding-left: 30px;
+}
+
+nav #add_btn {
+	font-size: 32px;
+	float: right;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+nav input {
+	height: 30px;
+	width: 80%;
+	border-radius: 4px;
+	border: none;
+}
+
+header {
+	height: 45px;
+	margin: 0;
+	padding-top: 5px;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	background-color: #000;
+	top: 0;
+}
+
+#menu_btn {
+	float: left;
+	margin-top: 7px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+#save_btn {
+	float: right;
+	margin-top: 5px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+section {
+	margin-left: 250px;
+}
+
+.block {
+	position: fixed;
+	margin-left: 1%;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 15px;
+	width: 48%;
+	border-radius: 5px;
+	border: 1px solid grey;
+	overflow: auto;
+	word-wrap: break-word;
+	bottom: 20px;
+	top: 60px;
+	height: auto;
+}
+
+.block textarea {
+	height: 100%;
+	width: 100%;
+	border: none;
+	resize: none;
+	font-family: courier;
+}
+
+#result {
+	margin-left: 51%;
+}
+
+@media screen and (max-width: 999px) {
+	.block {
+		width: 98%;
+		height: 40%;
+		max-height: 49%;
+	}
+	
+	#result {
+		bottom: 0;
+		margin-left: 1%;
+		top: 60%;
+	}
+}
