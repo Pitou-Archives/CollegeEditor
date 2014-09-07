@@ -91,9 +91,9 @@ function addCourseInList(name) {
 
 function switchActiveLi(name) {
 	var li_el = document.getElementById('course_'+name);
-	li_el.className='active';
 	active.className='';
 	active=li_el;
+	active.className='active';
 }
 
 function getCourse(name) {
@@ -128,6 +128,7 @@ function createCourse(name, content) {
 		}
 		else {
 			addCourseInList(name);
+        	switchActiveLi(name);
 		}
 	}
 	
@@ -141,7 +142,7 @@ function createCourse(name, content) {
 	        	var resp = JSON.parse(xhr.responseText);
 	        	current = name;
 	        	result.innerHTML = resp['compiled'];
-	        	switchActiveLi(name);
+	        	result.scrollTop = result.innerHTML.length;
 	        }
 	    };
 	    xhr.open("POST", 'Core/Course.php', true);
