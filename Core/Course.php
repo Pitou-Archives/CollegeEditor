@@ -14,7 +14,7 @@ switch (ACTION) {
 	case 'create':
 		$compiled = parseMD($_POST['content']);
 		file_put_contents('../courses/Markdown/'.$_POST['name'].'.md', $_POST['content']);
-		file_put_contents('../courses/HTML/'.$_POST['name'].'.html', '<!doctype html><html><head><title>'.$_POST['name'].' - CollegeEditor</title><meta charset="utf-8" /></head><body>'.$compiled.'</body></html>');
+		file_put_contents('../courses/HTML/'.$_POST['name'].'.html', '<!doctype html><html><head><title>'.$_POST['name'].' - CollegeEditor</title><meta charset="utf-8" /></head><body style="font-family:helvetica,verdana;">'.$compiled.'</body></html>');
 		echo json_encode(
 			array (
 				'compiled' => $compiled
