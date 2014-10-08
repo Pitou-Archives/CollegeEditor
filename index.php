@@ -3,7 +3,7 @@
 
 	<head>
 
-		<title>College Editor - v0.5</title>
+		<title>College Editor</title>
 
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="assets/css/editor.css?hash=<?php echo hash_file('md5', 'assets/css/editor.css'); ?>">
