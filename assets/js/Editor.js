@@ -33,33 +33,51 @@ BehaveHooks.add('change', function(data){
 	WYSIWYG();
 });*/
 
+/*setInterval(function() {
+
+	WYSIWYG();
+
+}, 3000);*/
 
 
 //Menu behavior
 
-var menu = document.getElementById('menu');
-var menuBtn = document.getElementById('menu_btn');
+var menu = document.getElementById("menu"),
+	menuBtn = document.getElementById("menu_btn"),
+	section = document.getElementById("section");
 
 document.onclick = function() {
-	document.body.style.marginLeft = '-250px';
+
+	menu.className = "";
+	section.className = "";
+
 };
 
-menuBtn.onclick = function(e) {
-	if (document.body.style.marginLeft == '-250px') {
-		document.body.style.marginLeft = '0px';
+menuBtn.onclick = function(event) {
+
+	if (section.className === "deplace") {
+
+		menu.className = "";
+		section.className = "";
+
 	}
+
 	else {
-		document.body.style.marginLeft = '-250px';
+
+		menu.className = "show";
+		section.className = "deplace";
+
 	}
-	e.stopPropagation();
+
+	event.stopPropagation();
+
 };
 
-menu.onclick = function(e) {
-	e.stopPropagation();
+menu.onclick = function(event) {
+
+	event.stopPropagation();
+
 };
-
-document.body.style.marginLeft = '-250px';
-
 
 
 // Editor CRUD Ajax
