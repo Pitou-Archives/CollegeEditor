@@ -93,9 +93,11 @@ saveBtn.onclick = function() {
 
 addBtn.onclick = function() {
 	var name = addInput.value;
-	addCourseInList(name);
-	switchActiveLi(name);
-	createCourse(name, '');
+	if (name != '') {
+		addCourseInList(name);
+		switchActiveLi(name);
+		createCourse(name, '');
+	}
 };
 
 function addCourseInList(name) {
@@ -133,7 +135,7 @@ function getCourse(name) {
 	    xhr.send('_action=get&name='+encodeURIComponent(name));
 	}
 	else {
-		alert('Impossible: Failed to connect to server');
+		alert('Error: Failed to connect to server');
 	}
 	menuBtn.click();
 }
